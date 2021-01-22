@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+svg[role=img] {
+    height: 500px;
+    width: 500px;
+}
