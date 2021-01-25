@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Defs, Svg } from 'components';
+import { XLINK, XMLNS } from 'constants';
 
 export default function Sprite({ children, ...props }) {
     return (
         <Svg
             hidden
             style={{ display: 'none' }}
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
+            xmlns={XMLNS}
+            xmlnsXlink={XLINK}
         >
             <Defs {...props}>{children}</Defs>
         </Svg>
