@@ -5,9 +5,9 @@ export default function Defs({ children, defaultViewBox }) {
     return (
         <defs>
             {Children.map(children, (child) => {
-                const { id, noSymbol, viewBox } = child.props;
+                if (child.noSymbol) return child;
 
-                if (noSymbol) return child;
+                const { id, viewBox } = child.props;
 
                 return (
                     <symbol

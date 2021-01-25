@@ -1,5 +1,5 @@
-export { default as Defs } from './defs';
-export { default as Icon } from './icon';
-export { default as Sprite } from './sprite';
-export { default as Svg } from './svg';
-export { default as Use } from './use';
+export { default as Defs } from './Defs';
+export { default as Icon } from './Icon';
+export { default as Sprite } from './Sprite';
+export { default as Svg } from './Svg';
+export { default as Use } from './Use';
