@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Defs({ children, defaultViewBox }) {
     return (
-        <defs>
+        <defs data-testid="defs">
             {Children.map(children, (child) => {
                 if (child.noSymbol) return child;
 

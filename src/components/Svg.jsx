@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 
 export default function Svg({ children, hidden, ...props }) {
     return (
-        <svg {...props} aria-hidden={hidden.toString()} hidden={hidden}>
+        <svg
+            {...props}
+            aria-hidden={hidden.toString()}
+            data-testid="svg"
+            hidden={hidden}
+        >
             {children}
         </svg>
     );
