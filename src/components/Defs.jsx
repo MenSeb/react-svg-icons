@@ -5,7 +5,11 @@ export default function Defs({ children, defaultViewBox }) {
     return (
         <defs data-testid="defs">
             {Children.map(children, (child) => {
-                if (child.noSymbol) return child;
+                if (child.noSymbol)
+                    return cloneElement(child, {
+                        noSymbol: null,
+                        viewBox: null,
+                    });
 
                 const { id, viewBox } = child.props;
 
@@ -15,7 +19,11 @@ export default function Defs({ children, defaultViewBox }) {
                         id={id}
                         viewBox={viewBox || defaultViewBox}
                     >
-                        {cloneElement(child, { id: null, viewBox: null })}
+                        {cloneElement(child, {
+                            id: null,
+                            noSymbol: null,
+                            viewBox: null,
+                        })}
                     </symbol>
                 );
             })}
